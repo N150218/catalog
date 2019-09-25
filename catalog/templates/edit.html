@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <form action="http://localhost:5000/edit/{{old.id}}" method='POST'>
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name.." value="{{old.name}}">
+          
+              <label for="lname">mail</label>
+              <input type="text" id="email" name="email" placeholder="{{old.email}}">
+              <label for="lname">des</label>
+              <input type="text" id="email" name="des" placeholder="{{old.des}}">
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+</head>
+<body>
+{% with messages=get_flashed_messages()%}
+{%if messages%}
+{% for message in messages%}
+<h3>{{message}}</h3>
+{%endfor%}
+{%endif%}
+{%endwith%}
+
+<div class="container">
+  <h2>Details of the Registered Members</h2>            
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+		  <th>Sno</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+    {%for i in reg%}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+		  <td>{{i.email}}</td>
+			<td><button><a href="{{url_for('delete',register_id=i.id)}}">Direct Delete</a></button></td>      
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+<button><a href="{{url_for('form')}}">Add</a></button>
+<button><a href="{{url_for('logout')}}">logout</a></button>
+</div>
+
+
+</body>
+</html>

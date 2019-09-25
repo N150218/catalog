@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container">
+            <form action="http://localhost:5000/addData" method='POST'>
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+          
+              <label for="lname">mail</label>
+              <input type="text" id="email" name="email" placeholder="Your mail..">
+              <label for="lname">des</label>
+              <input type="text" id="email" name="des" placeholder="Your des..">
+            <button><a href="{{url_for('addData')}}">Normal button add</a></button>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+    </body>
+</html>
